@@ -13,6 +13,5 @@ int main(void)
     }
   }
   printf("Lines = %ld\n", lines);
-
   return (0);
 }
