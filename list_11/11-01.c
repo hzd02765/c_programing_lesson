@@ -64,6 +64,7 @@ int main(int argc, char *argv[])
     fprintf(stderr, "辞書ファイル %s が見つかりません。\n", DICT_DIC);
     return (-1);
   }
+
   fread_word(fp);
   fclose(fp);
 
@@ -79,7 +80,7 @@ void fread_word(FILE *fp)
 {
   int i;
   char buffer[MAX_LINE];
-
+ 
   for (i = 0; fgets(buffer, MAX_LINE, fp) != NULL; i++){
     if (i >= MAX_WORD){
       fprintf(stderr, "単語数が多すぎます(最大 %d 人)\n", MAX_WORD);
